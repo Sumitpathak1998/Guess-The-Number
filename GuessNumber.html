@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="./GuessNumber.css">
+</head>
+<body>
+    <header class="top">
+    </header>
+    <section class="container">
+        <section class="head">
+            <div class="logo"></div>
+            <div class="heading">Guess the Number</div>
+        </section>
+        <div class="hint">Hint</div>
+        <section class="main">
+            <form action="">
+               Enter the number between 0 to 100<br>
+               <input  class="num" type="text" name="number" size="6px" >
+               <input class="play" type="submit" value="let's Play">
+            </form>
+        </section>
+    </section>
+    <script>
+        let num = Math.floor(Math.random()*100+1); 
+        console.log(num);
+
+        let hint = document.getElementsByClassName("hint")[0];
+        console.log(hint);
+
+        function checkPrime(num){
+            let count = 0 ; 
+            for( let i = 2 ; i <= num/2 ; i++ ){
+                if ( num % i === 0 ){
+                    count++; 
+                }
+            }
+            if ( count === 0 ){
+                return "Number is Prime Number"; 
+            }else{
+                return "Number is not a Prime Number";
+            }
+        }
+        function EvenOdd(num){
+            if ( num % 2 === 0 ){
+                return "Number is Even"; 
+            }else {
+                return "Number is Odd"; 
+            }
+        }
+
+        function divisibility(num){
+            let arr = []; 
+            for ( let i = 2 ; i <= 10 ; i++ ){
+                if ( num % i === 0 ){
+                    arr.push(i); 
+                }
+            }
+            let ele = 1 ;
+            for ( val of arr){
+                ele += " , "+val; 
+            }
+            return  `Number is Devisible By ${ele}`; 
+        }
+
+        let  a = checkPrime(num); 
+        let  b = EvenOdd(num) ;
+        let  c = divisibility(num);
+
+        let hintcheck = true ; 
+        hint.addEventListener( "click" , (e) =>{
+            if(hintcheck){
+                hint.innerHTML += `: <br> 1.${a} <br> 2.${b} <br> 3.${c}`;
+                if ( window.innerWidth >= 300 && window.innerWidth <=550){
+                    hint.style.width = "250px";
+                    hint.style.height = "80px";
+                }
+                else if ( window.innerWidth > 550 && window.innerWidth <= 800){
+                    hint.style.width = "350px";
+                    hint.style.height = "140px";
+                }
+                else {
+                    hint.style.width = "450px";
+                    hint.style.height = "160px";
+                }
+                hintcheck = false;    
+            }else {
+                hint.innerHTML = "Hint" ; 
+                if( window.innerWidth >= 300 && window.innerWidth <= 550){
+                    hint.style.width = "70px";
+                    hint.style.height = "30px";
+                }
+                else if ( window.innerWidth > 550 && window.innerWidth <= 800){
+                    hint.style.width = "70px";
+                    hint.style.height = "50px";
+                }
+                else {
+                    hint.style.width = "100px";
+                    hint.style.height = "50px";
+                }
+                hintcheck = true;
+            }
+        })
+
+        let form = document.forms[0];
+        console.log(form); 
+
+        let input = document.getElementsByTagName("input")[0];
+        console.log(input);
+
+        let play = document.getElementsByTagName("input")[1];
+
+        let div = document.createElement("div");
+        console.log(div);
+        
+        div.setAttribute("class", "info");
+        input.insertAdjacentElement("afterend" , div);   
+        let count = 0; 
+
+        function check( num , guess){
+            let finish = false ; 
+            let chance = 5-count ;
+            if ( num == guess){
+                finish = true;  
+            }else if( guess < num){
+                div.innerHTML = `Guess is less then number <br> 
+                                You have ${chance} chance left`;
+                div.style.color = "red";
+                finish = false; 
+            }else {
+                div.innerHTML = `Guess is grater then number <br> 
+                                You have ${chance} chance left`;
+                div.style.color = "red";
+                finish = false ;  
+            }
+            return finish; 
+        }
+            form.addEventListener( "submit" , (e) => {
+                count++;
+                e.preventDefault();
+                let guess = form.elements.number.value ;
+                console.log("The count : "+count);
+                let result = check(num , guess) ;
+                let chance = 5-count+1; 
+                if ( count < 5){
+                    if ( result === true){
+                    div.innerHTML = `Yupp ....You Win <br>Your score is ${chance}`;
+                    play.style.display = "none" ;
+                    div.style.color = "green";  
+
+                    }
+                }else {
+                    div.innerHTML = `Sorry ....you loose the game <br>
+                                    Number is ${num}`;
+                    play.style.display = "none" ;   
+                }
+            })
+    </script>
+</body>
+</html>

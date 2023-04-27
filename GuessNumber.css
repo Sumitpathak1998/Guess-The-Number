@@ -1,0 +1,198 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.top{
+    background-color: antiquewhite;
+    background-image: url(https://www.teachwithict.com/uploads/5/5/8/2/5582303/published/guess-the-number.png?1611311296);
+    background-repeat: round;
+    background-size: cover;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-delay: 2m;
+    animation-iteration-count: 1;
+}
+@Keyframes logo{
+    from{
+        height: 100vh;
+    }
+    to{
+        height: 1vh;
+    }
+}
+.head{
+    height: 210px;
+    box-sizing: border-box;
+    padding: 2%;
+    color: rgb(236, 243, 22);
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    height: 200px; 
+    width:  200px;
+    background-image: url(https://m.media-amazon.com/images/I/61BRwWBPKfL.png);
+    background-repeat: round;
+    background-size: contain;
+    border-radius: 50%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Sigmar&display=swap');
+.heading{
+    font-size: 550%;
+    font-weight: 900;
+}
+@media screen and (min-width : 300px) and (max-width : 550px) {
+    .head{
+        height: 100px;
+    }
+    .logo{
+        height: 70px;
+        width : 70px;
+    }
+    .heading{
+        font-size: 150%;
+        font-weight: 500;
+    }
+}
+@media screen and (min-width : 551px) and ( max-width : 800px) {
+    .head{
+        height: 150px;
+    }
+    .logo{
+        height: 130px;
+        width : 130px;
+    }
+    .heading{
+        font-size: 250%;
+        font-weight: 500;
+    }
+}
+form{
+    height: 76vh;
+    font-size: 230%;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Sigmar', cursive;
+    box-sizing: border-box;
+    padding-top: 3%;
+    text-align: center;
+}
+.container{
+    background-image: url(https://monkeypuzzletraining.co.uk/images/Blog-images/article-images/xl-critical-thinking.jpg);
+    background-repeat: round;
+    background-size: 50vw 90vh;
+    box-sizing: border-box;
+    padding-top: 3px;
+}
+.num{
+    font-size: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding-left: 4% ;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    border:  2px solid rgb(90, 0, 128);
+    background-color: rgba(219, 169, 223, 0.455);
+}
+.play{
+    font-size: 80%;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding: 2%;
+    margin-top: 5%;
+    border-radius: 20px;
+    border: 3px solid rgb(11, 104, 186);
+    font-family: 'Inter', sans-serif;
+    font-family: 'Sigmar', cursive; 
+    background-color: coral;
+}
+@media screen and ( min-width : 300px) and ( max-width : 550px){
+    .main{
+        box-sizing: border-box;
+        padding: 3%;
+    }
+    form{
+        font-size: 150%;
+    }
+    .container{
+        background-size: 100vw 90vh;
+    }
+    .num{
+        font-size: 80%;
+        box-sizing: border-box;
+        padding-top: 10px;
+    }
+    .info{
+        font-size: 70%;
+        box-sizing: border-box;
+        padding-bottom: 3%;
+        color: beige;
+    }
+}
+@media screen and ( min-width : 551px) and ( max-width : 800px) {
+    .main{
+        box-sizing: border-box;
+        padding: 3%;
+    }
+    form{
+        font-size: 270%;
+    }
+    .container{
+        background-size: 100vw 90vh;
+    }
+    .num{
+        font-size: 80%;
+        box-sizing: border-box;
+        padding-top: 10px;
+    }
+    .info{
+        font-size: 70%;
+        box-sizing: border-box;
+        padding-bottom: 3%;
+        color: beige;
+    }
+    .play{
+        font-size: 50%;
+    }
+}
+.hint{
+    height: 50px;
+    width: 100px;
+    position: fixed; 
+    bottom: 100px;
+    left: 1%;
+    background-color: darkgoldenrod;
+    font-size: 150%;
+    box-sizing: border-box;
+    padding-top: 0.5%;
+    padding-left: 1%;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Sigmar', cursive;
+    border-radius: 20px;
+    border: 2px solid yellowgreen;
+}
+@media screen and (min-width :300px) and ( max-width : 550px){
+    .hint{
+        font-size: 70%;
+        height: 30px;
+        width: 70px;
+        box-sizing: border-box;
+        padding-left: 4%;
+        padding-top: 2%;
+        bottom: 50px;
+    }
+}
+@media screen and ( min-width : 551px) and ( max-width : 800px) {
+    .hint{
+        font-size: 100%;
+        height: 50px;
+        width: 70px;
+        box-sizing: border-box;
+        padding-left: 2.5%;
+        padding-top: 2%;
+        bottom: 50px;
+    }  
+}
