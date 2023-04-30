@@ -3,24 +3,6 @@
     padding: 0;
     margin: 0;
 }
-.top{
-    background-color: antiquewhite;
-    background-image: url(https://www.teachwithict.com/uploads/5/5/8/2/5582303/published/guess-the-number.png?1611311296);
-    background-repeat: round;
-    background-size: cover;
-    animation-name: logo;
-    animation-duration: 4s;
-    animation-delay: 2m;
-    animation-iteration-count: 1;
-}
-@Keyframes logo{
-    from{
-        height: 100vh;
-    }
-    to{
-        height: 1vh;
-    }
-}
 .head{
     height: 130px;
     box-sizing: border-box;
