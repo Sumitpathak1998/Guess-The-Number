@@ -22,22 +22,15 @@
     }
 }
 .head{
-    height: 210px;
+    height: 130px;
     box-sizing: border-box;
     padding: 2%;
-    color: rgb(236, 243, 22);
+    color: rgb(213, 106, 6);
     display: flex;
     gap: 1%;
     justify-content: center;
     align-items: center;
-}
-.logo{
-    height: 200px; 
-    width:  200px;
-    background-image: url(https://m.media-amazon.com/images/I/61BRwWBPKfL.png);
-    background-repeat: round;
-    background-size: contain;
-    border-radius: 50%;
+    font-family: 'Bangers'; 
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Sigmar&display=swap');
 .heading{
@@ -46,63 +39,67 @@
 }
 @media screen and (min-width : 300px) and (max-width : 550px) {
     .head{
-        height: 100px;
-    }
-    .logo{
-        height: 70px;
-        width : 70px;
+        height: 60px;
     }
     .heading{
-        font-size: 150%;
+        font-size: 200%;
         font-weight: 500;
     }
 }
 @media screen and (min-width : 551px) and ( max-width : 800px) {
     .head{
-        height: 150px;
-    }
-    .logo{
-        height: 130px;
-        width : 130px;
+        height: 110px;
     }
     .heading{
-        font-size: 250%;
+        font-size: 300%;
         font-weight: 500;
     }
 }
 form{
-    height: 76vh;
+    height: 83vh;
     font-size: 230%;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
     font-family: 'Sigmar', cursive;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 3%;
     text-align: center;
 }
 .container{
-    background-image: url(https://monkeypuzzletraining.co.uk/images/Blog-images/article-images/xl-critical-thinking.jpg);
+    background-image: url(https://img.freepik.com/premium-vector/yellow-comic-background-with-cloud-cartoon_530597-776.jpg?w=1060);
     background-repeat: round;
-    background-size: 50vw 90vh;
+    background-size: 80vw 80vh;
     box-sizing: border-box;
     padding-top: 3px;
 }
+.subhead{
+    box-sizing: border-box;
+    margin-bottom: 1%;
+}
 .num{
+    height: 12%;
+    width: 12%;
     font-size: 100%;
-    border-radius: 20px;
+    border-radius: 50%;
     box-sizing: border-box;
     padding-left: 4% ;
     margin-bottom: 3%;
     margin-top: 2%;
-    border:  2px solid rgb(90, 0, 128);
-    background-color: rgba(219, 169, 223, 0.455);
+    border: 5px solid;
+    font-family: 'Bangers';
+    background-color: rgb(244, 247, 250);
 }
 .play{
+    height: 10%;
     font-size: 80%;
     font-weight: 700;
     box-sizing: border-box;
-    padding: 2%;
-    margin-top: 5%;
+    margin-top: 3%;
+    padding: 1%;
     border-radius: 20px;
     border: 3px solid rgb(11, 104, 186);
     font-family: 'Inter', sans-serif;
@@ -113,23 +110,28 @@ form{
     .main{
         box-sizing: border-box;
         padding: 3%;
+        padding-top: 0%;
     }
     form{
         font-size: 170%;
+        box-sizing: border-box;
+        padding: 0%;
     }
     .container{
-        background-size: 100vw 90vh;
+        background-size: 80vw 90vh;
     }
     .num{
-        font-size: 80%;
+        height: 10%;
+        width: 15%;
+        font-size: 57%;
         box-sizing: border-box;
-        padding-top: 10px;
+        padding-top: 1%;
     }
     .info{
         font-size: 80%;
         box-sizing: border-box;
         padding-bottom: 3%;
-        color: beige;
+        color:  aliceblue;
     }
 }
 @media screen and ( min-width : 551px) and ( max-width : 800px) {
@@ -146,7 +148,7 @@ form{
     .num{
         font-size: 80%;
         box-sizing: border-box;
-        padding-top: 10px;
+        padding-left: 2.5%;
     }
     .info{
         font-size: 70%;
@@ -161,38 +163,35 @@ form{
 .hint{
     height: 50px;
     width: 100px;
-    position: fixed; 
-    bottom: 100px;
-    left: 1%;
+    text-align: start;
     background-color: darkgoldenrod;
-    font-size: 150%;
+    font-size: 60%;
     box-sizing: border-box;
     padding-top: 0.5%;
     padding-left: 1%;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Sigmar', cursive;
     border-radius: 20px;
     border: 2px solid yellowgreen;
 }
 @media screen and (min-width :300px) and ( max-width : 550px){
     .hint{
-        font-size: 70%;
+        font-size: 56%;
+        font-weight: 400;
         height: 30px;
         width: 70px;
         box-sizing: border-box;
         padding-left: 4%;
         padding-top: 2%;
-        bottom: 50px;
+        padding-bottom: 1%;
     }
 }
 @media screen and ( min-width : 551px) and ( max-width : 800px) {
     .hint{
-        font-size: 100%;
+        font-size: 50%;
         height: 50px;
         width: 70px;
         box-sizing: border-box;
-        padding-left: 2.5%;
-        padding-top: 2%;
+        padding-left: 0.5%;
+        padding-top: 0.5%;
         bottom: 50px;
     }  
 }

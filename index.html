@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess The Number</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Inter&family=Sigmar&display=swap');
+      </style>
     <link rel="stylesheet" href="./GuessNumber.css">
 </head>
 <body>
@@ -12,14 +15,13 @@
     </header>
     <section class="container">
         <section class="head">
-            <div class="logo"></div>
             <div class="heading">Guess the Number</div>
         </section>
-        <div class="hint">Hint</div>
         <section class="main">
             <form action="">
-               Enter the number between 0 to 100<br>
-               <input  class="num" type="text" name="number" size="6px" >
+               <div class="subhead">Enter a number between 0 to 100</div>
+               <div class="hint">Clue</div>
+               <input  class="num" type="text" name="number" >
                <input class="play" type="submit" value="let's Play">
             </form>
         </section>
@@ -63,7 +65,7 @@
             for ( val of arr){
                 ele += " , "+val; 
             }
-            return  `Number is Devisible By ${ele}`; 
+            return  `Number is Divisible By ${ele}`; 
         }
 
         let  a = checkPrime(num); 
@@ -76,15 +78,15 @@
                 hint.innerHTML += `: <br> 1.${a} <br> 2.${b} <br> 3.${c}`;
                 if ( window.innerWidth >= 300 && window.innerWidth <=550){
                     hint.style.width = "250px";
-                    hint.style.height = "80px";
+                    hint.style.height = "160px";
                 }
                 else if ( window.innerWidth > 550 && window.innerWidth <= 800){
-                    hint.style.width = "350px";
-                    hint.style.height = "140px";
+                    hint.style.width = "400px";
+                    hint.style.height = "190px";
                 }
                 else {
                     hint.style.width = "450px";
-                    hint.style.height = "160px";
+                    hint.style.height = "200px";
                 }
                 hintcheck = false;    
             }else {
@@ -128,12 +130,12 @@
             }else if( guess < num){
                 div.innerHTML = `Guess is less then number <br> 
                                 You have ${chance} chance left`;
-                div.style.color = "white";
+                div.style.color = "aliceblue";
                 finish = false; 
             }else {
                 div.innerHTML = `Guess is grater then number <br> 
                                 You have ${chance} chance left`;
-                div.style.color = "white";
+                div.style.color = "aliceblue";
                 finish = false ;  
             }
             return finish; 
@@ -150,7 +152,6 @@
                     div.innerHTML = `Yupp ....You Win <br>Your score is ${chance}`;
                     play.style.display = "none" ;
                     div.style.color = "green";  
-
                     }
                 }else {
                     div.innerHTML = `Sorry ....you loose the game <br>
